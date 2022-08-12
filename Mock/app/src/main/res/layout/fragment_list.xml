@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.FragmentAdd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_header"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/add_header_bg"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:id="@+id/tv_myBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/budget"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/aclonica"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_myBudget"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_trash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/tv_myBudget"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_myBudget"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/trash"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_header1"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_header"
+                app:layout_constraintVertical_bias="0.36">
+
+                <TextView
+                    android:id="@+id/tv_title_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:text="@string/tv_totalBalance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_tvTotalBalance_myBudget"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellowLight"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_balance" />
+
+                <ImageView
+                    android:id="@+id/img_income"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/drop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+
+                <TextView
+                    android:id="@+id/tv_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Income"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_tvTotalIncome_myBudget"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_income"
+                    app:layout_constraintStart_toEndOf="@+id/img_income"
+                    app:layout_constraintTop_toTopOf="@+id/img_income" />
+
+
+                <TextView
+                    android:id="@+id/tv_expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Expense"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_tvTotalExpense_myBudget"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_income"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_income" />
+
+
+                <ImageView
+                    android:id="@+id/img_expense"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/increase"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_expense"
+                    app:layout_constraintTop_toTopOf="@id/img_income" />
+
+                <TextView
+                    android:id="@+id/tv_dIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/textSize_tvTotalIncome_myBudget"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_income"
+                    app:layout_constraintStart_toStartOf="@id/img_income"
+                    app:layout_constraintTop_toBottomOf="@id/img_income" />
+
+                <TextView
+                    android:id="@+id/tv_dExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textSize_tvTotalIncome_myBudget"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_expense"
+                    app:layout_constraintStart_toStartOf="@id/img_expense"
+                    app:layout_constraintTop_toBottomOf="@id/img_expense" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_history"
+                app:layout_constraintTop_toBottomOf="@id/constraint"
+                app:layout_constraintStart_toStartOf="@id/constraint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_history"
+                android:fontFamily="@font/aclonica"
+                android:textSize="@dimen/textSize_history_myBudget"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                app:layout_constraintEnd_toEndOf="@id/constraint"
+                app:layout_constraintTop_toBottomOf="@+id/constraint"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

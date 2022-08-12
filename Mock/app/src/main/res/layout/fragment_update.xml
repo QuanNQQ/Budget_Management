@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    tools:context=".fragment.FragmentUpdate">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/add_header_bg"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="180dp">
+
+        <TextView
+            android:id="@+id/tv_updateBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/updated"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center_vertical"
+            android:text="Update Expense"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_updateBudget"
+            app:layout_constraintBottom_toBottomOf="@id/tv_updateBudget"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/trash"
+            android:layout_marginEnd="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_header"
+        android:background="@drawable/bg_header1"
+        >
+
+        <ImageView
+            android:id="@+id/img_add_expense"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/add_expense"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_img_add_expense"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="Update Expense"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_add_expense"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/edt_upType"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        android:hint="Type"
+        android:textSize="@dimen/textSize_type"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/type"
+        />
+
+    <EditText
+        android:id="@+id/edt_upLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_upType"
+        android:hint="@string/hint_label"
+        android:textSize="@dimen/textSize_label"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/label"
+        />
+
+    <EditText
+        android:id="@+id/edt_upDescription"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_upLabel"
+        android:hint="@string/hint_description"
+        android:textSize="@dimen/textSize_description"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/description"
+        />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/edt_upAmount"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_upDescription"
+        android:hint="@string/hint_amount"
+        android:textSize="@dimen/textSize_amount"
+
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/money"
+        />
+
+    <TextView
+        android:id="@+id/tv_upDatetime"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_upAmount"
+        android:hint="@string/hint_date"
+        android:textSize="@dimen/textSize_date"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/schedule"
+        />
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upDatetime"
+        app:layout_constraintStart_toStartOf="@id/edt_upAmount"
+        android:paddingLeft="10dp"
+        android:text="Cancel"
+        android:textSize="@dimen/textSize_cancel"
+        android:drawableStart="@drawable/cancell"
+        android:gravity="center"
+        android:fontFamily="@font/aclonica"
+        android:background="@drawable/bg_button"
+        />
+
+    <TextView
+        android:fontFamily="@font/aclonica"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upDatetime"
+        app:layout_constraintEnd_toEndOf="@id/edt_upAmount"
+        android:text="Save"
+        android:drawableStart="@drawable/check"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        android:textSize="@dimen/textSize_save"
+        android:background="@drawable/bg_button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

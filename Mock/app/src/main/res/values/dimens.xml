@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_width_user">80dp</dimen>
+    <dimen name="layout_height_user">80dp</dimen>
+    <dimen name="layout_marginStart_user">10dp</dimen>
+    <dimen name="textSize_Welcome">25sp</dimen>
+
+    <dimen name="layout_margin_start_welcome">15dp</dimen>
+    <dimen name="layout_margin_top_welcome">15dp</dimen>
+    <dimen name="layout_height_PieChart">250dp</dimen>
+
+    <dimen name="textSize_tvInCome_home">18sp</dimen>
+    <dimen name="textSize_tvBalance_home">25sp</dimen>
+
+
+    <dimen name="textSize_tvTotalIncome_myBudget">18sp</dimen>
+    <dimen name="textSize_tvTotalExpense_myBudget">18sp</dimen>
+    <dimen name="textSize_tvTotalBalance_myBudget">18sp</dimen>
+
+    <dimen name="textSize_history_myBudget">20sp</dimen>
+
+    <dimen name="textSize_Add_addBudget">25sp</dimen>
+
+    <dimen name="layout_height_add_new_expense">130dp</dimen>
+    <dimen name="layout_height_new_expense">200dp</dimen>
+
+    <dimen name="textSize_label">18sp</dimen>
+    <dimen name="textSize_description">18sp</dimen>
+    <dimen name="textSize_amount">18sp</dimen>
+    <dimen name="textSize_date">18sp</dimen>
+    <dimen name="textSize_type">18sp</dimen>
+    <dimen name="textSize_cancel">20sp</dimen>
+    <dimen name="textSize_save">20sp</dimen>
+
+    <dimen name="textSize_add_new_Expense">22sp</dimen>
+
+    <dimen name="textSize_type_itemView">18sp</dimen>
+    <dimen name="textSize_date_itemView">16sp</dimen>
+    <dimen name="textSize_Budget_splash">25sp</dimen>
+
+
+
+
+
+
+
+
+
+</resources>

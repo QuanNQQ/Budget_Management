@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_Income">Income</string>
+
+    <string name="tv_myBudget">My Budget</string>
+    <string name="tv_totalBalance">Total Balance</string>
+    <string name="tv_history">All</string>
+    <string name="tv_cancel">Cancel</string>
+    <string name="tv_save">Save</string>
+    <string name="tv_add_new_expense">Add New Expense</string>
+    <string name="hint_label">Label</string>
+    <string name="hint_amount">Amount</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_description">Description</string>
+    <string name="All">All</string>
+
+</resources>
